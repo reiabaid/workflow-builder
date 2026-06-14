@@ -1,0 +1,130 @@
+.base-node {
+  position: relative;
+  background: #232323;
+  border: 1px solid #383838;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  color: #e5e5e5;
+  overflow: visible;
+}
+
+/* Selected node — fallback for browsers without color-mix */
+.react-flow__node.selected .base-node {
+  border-color: var(--node-accent, #6366f1);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.35), 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Enhanced: glow tracks the node's own accent color where supported */
+@supports (color: color-mix(in srgb, red 50%, blue)) {
+  .react-flow__node.selected .base-node {
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--node-accent, #6366f1) 35%, transparent),
+                0 6px 20px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.base-node-header {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  letter-spacing: 0.02em;
+}
+
+.base-node-body {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.base-node-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.base-node-field-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.base-node-input {
+  border: 1px solid #404040;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-size: 12px;
+  font-family: inherit;
+  color: #f0f0f0;
+  background: #1a1a1a;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.base-node-input:focus {
+  border-color: var(--node-accent, #6366f1);
+  background: #111;
+}
+
+.base-node-textarea {
+  resize: none;
+  min-height: 32px;
+  line-height: 1.4;
+}
+
+/* React Flow handle styling */
+.react-flow__handle {
+  width: 9px;
+  height: 9px;
+  background: var(--node-accent, #6366f1);
+  border: 2px solid #232323;
+  box-shadow: 0 0 0 1px var(--node-accent, #6366f1);
+}
+
+.react-flow__handle-left {
+  left: -5px;
+}
+
+.react-flow__handle-right {
+  right: -5px;
+}
+
+.handle-label {
+  position: absolute;
+  font-size: 9px;
+  color: #6b7280;
+  white-space: nowrap;
+  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Labels sit outside the node boundary, next to the connector dot */
+.handle-label-left {
+  right: calc(100% + 5px);
+  text-align: right;
+}
+
+.handle-label-right {
+  left: calc(100% + 5px);
+}
+
+.llm-node-note {
+  font-size: 11px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.text-node-vars-hint {
+  font-size: 10px;
+  color: #b45309;
+  background: rgba(180, 83, 9, 0.12);
+  border: 1px solid rgba(180, 83, 9, 0.25);
+  border-radius: 4px;
+  padding: 3px 6px;
+}

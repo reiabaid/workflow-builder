@@ -1,0 +1,30 @@
+# ── Frontend ──
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# ── Backend ──
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/.env
+backend/venv/
+backend/.venv/
+backend/backend.log
+backend/backend.err
+
+# ── OS / Editor ──
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ── Misc ──
+*.log
+screenshot.png

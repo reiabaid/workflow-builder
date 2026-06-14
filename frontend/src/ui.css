@@ -1,0 +1,57 @@
+.pipeline-canvas {
+  flex: 1;
+  width: 100%;
+  background: #141414;
+}
+
+/* React Flow overrides for dark theme */
+.react-flow__background {
+  background: #141414;
+}
+
+.react-flow__minimap {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #2d2d2d;
+}
+
+.react-flow__controls {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2d2d2d;
+}
+
+.react-flow__controls-button {
+  background: #1a1a1a;
+  border-bottom: 1px solid #2d2d2d;
+  color: #9ca3af;
+  fill: #9ca3af;
+}
+
+.react-flow__controls-button:hover {
+  background: #2a2a2a;
+  fill: #e5e5e5;
+}
+
+.react-flow__controls-button svg {
+  fill: inherit;
+}
+
+/* Edge wires */
+.react-flow__edge-path {
+  stroke: #6366f1;
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: #a78bfa;
+  stroke-width: 2.5;
+}
+
+/* Attribution */
+.react-flow__attribution {
+  background: transparent;
+  color: #383838;
+}
